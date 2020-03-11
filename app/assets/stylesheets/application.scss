@@ -5,6 +5,7 @@
 @import "font-awesome";
 @import "modules/user";
 @import "modules/flash";
+@import "modules/group";
 
 .wrapper{
   display: flex;
@@ -51,12 +52,15 @@
     height: calc(100vh - 120px);
     &__box{
       margin: 0 20px;
-      color: $white;
-      font-weight: bold;
+      &_link{
+        text-decoration: none;
+        color: $white;
+      }
       &__name{
         font-size: 15px;
         margin-top: 20px;
         margin-bottom: 5px;
+        font-weight: bold;
       }
       &__message{
         font-size: 11px;
