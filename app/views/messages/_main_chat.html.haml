@@ -1,0 +1,26 @@
+.chat-main
+  .chat-main__main-header
+    .chat-main__main-header__left-box
+      .chat-main__main-header__left-box__name groupname
+      .chat-main__main-header__left-box__member Member：name
+    .chat-main__main-header__right-box 
+      .chat-main__main-header__right-box__edit 
+        = link_to 'Edit', "#",class: "chat-main__main-header__right-box__edit"
+  .chat-main__main-content
+    .chat-main__main-content__box
+      .chat-main__main-content__box__user 
+        .chat-main__main-content__box__user__name name
+        .chat-main__main-content__box__user__date 2020/03/10(Tue) 20:29:32
+      .chat-main__main-content__box__message hello
+      .chat-main__main-content__box__user 
+        .chat-main__main-content__box__user__name name
+        .chat-main__main-content__box__user__date 2020/03/10(Tue) 20:29:32
+      .chat-main__main-content__box__message hello
+  .chat-main__form
+    %form.chat-main__form__formtag
+      .chat-main__form__formtag__input-box
+        %input{type: "text", class: "chat-main__form__formtag__input-box__text", placeholder: "type a message"}
+        %label{class: "chat-main__form__formtag__input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "chat-main__form__formtag__input-box__image__file"}
+      %input{type: "submit", value: "Send", class: "chat-main__form__formtag__submit_btn"}
