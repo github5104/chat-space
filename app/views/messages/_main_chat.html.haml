@@ -9,7 +9,7 @@
           = user.name
     .chat-main__main-header__right-box 
       .chat-main__main-header__right-box__edit 
-        = link_to 'Edit',edit_group_path(current_user),class: "chat-main__main-header__right-box__edit"
+        = link_to 'Edit',edit_group_path(@group),class: "chat-main__main-header__right-box__edit"
   .chat-main__main-content
     = render @messages
   .chat-main__form
