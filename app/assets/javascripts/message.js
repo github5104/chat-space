@@ -2,57 +2,54 @@ $(function () {
   var buildHTML = function (message) {
     if (message.content && message.image) {
       var html =
-        // `<div class="message" data-message-id= ` + message.id + `>` +
-        `<div class="chat-main__main-content__box" data-message-id=` + message.id + `>` +
-        `<div class="chat-main__main-content__box__user">` +
-        `<div class="chat-main__main-content__box__user__name">` +
-        message.user_name +
-        `</div>` +
-        `<div class="chat-main__main-content__box__user__date">` +
-        message.created_at +
-        `</div>` +
-        `</div>` +
-        `<div class="chat-main-content__box__message">` +
-        `<p class="lower-message__content">` +
-        message.content +
-        `</p>` +
-        `</div>` +
-        `<img class="lower-message__image" src=` + message.image + `>` +
-        `</div>` +
-        `</div>`
+        `<div class="chat-main__main-content__box" data-message-id= "${message.id}" >
+          <div class="chat-main__main-content__box__user">
+            <div class="chat-main__main-content__box__user__name">
+              ${message.user_name}
+            </div>
+            <div class="chat-main__main-content__box__user__date">
+              ${message.created_at}
+            </div>
+          </div>
+          <div class="chat-main-content__box__message">
+            <p class="lower-message__content">
+              ${message.content}
+            </p>
+          </div>
+          <img class="lower-message__image" src= "${message.image}">
+          </div>
+        </div>`
     } else if (message.content) {
       var html =
-        // `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="chat-main__main-content__box" data-message-id=` + message.id + `>` +
-        `<div class="chat-main__main-content__box__user">` +
-        `<div class="chat-main__main-content__box__user__name">` +
-        message.user_name +
-        `</div>` +
-        `<div class="chat-main__main-content__box__user__date">` +
-        message.created_at +
-        `</div>` +
-        `</div>` +
-        `<div class="chat-main-content__box__message">` +
-        `<p class="lower-message__content">` +
-        message.content +
-        `</p>` +
-        `</div>` +
-        `</div>`
+        `<div class="chat-main__main-content__box" data-message-id= "${message.id}" >
+          <div class="chat-main__main-content__box__user">
+            <div class="chat-main__main-content__box__user__name">
+              ${message.user_name}
+            </div>
+            <div class="chat-main__main-content__box__user__date">
+              ${message.created_at}
+            </div>
+          </div>
+          <div class="chat-main-content__box__message">
+            <p class="lower-message__content">
+              ${message.content}
+            </p>
+          </div>
+        </div>`
     } else if (message.image) {
       var html =
-        // `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="chat-main__main-content__box" data-message-id=` + message.id + `>` +
-        `<div class="chat-main__main-content__box__user">` +
-        `<div class="chat-main__main-content__box__user__name">` +
-        message.user_name +
-        `</div>` +
-        `<div class="chat-main__main-content__box__user__date">` +
-        message.created_at +
-        `</div>` +
-        `</div>` +
-        `<img class="lower-message__image" src=` + message.image + `>` +
-        `</div>` +
-        `</div>`
+        `<div class="chat-main__main-content__box" data-message-id= "${message.id}" >
+          <div class="chat-main__main-content__box__user">
+            <div class="chat-main__main-content__box__user__name">
+              ${message.user_name}
+            </div>
+            <div class="chat-main__main-content__box__user__date">
+              ${message.created_at}
+            </div>
+          </div>
+          <img class="lower-message__image" src= "${message.image}">
+          </div>
+        </div>`
     };
     return html;
   };
